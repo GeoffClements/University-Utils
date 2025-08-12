@@ -3,4 +3,4 @@
 	url = https://github.com/GeoffClements/Obsidian-latex-suite-snippets.git
 [submodule "Latex-Utilities"]
 	path = Latex-Utilities
-	url = ./Latex-Utilities/
+	url = https://github.com/GeoffClements/Latex-Utilities.git
