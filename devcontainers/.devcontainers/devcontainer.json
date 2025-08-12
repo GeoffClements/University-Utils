@@ -3,7 +3,9 @@
 {
 	"name": "OpenUniversity",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+
 	"image": "docker.io/ubuntu:rolling",
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {},
@@ -12,7 +14,14 @@
 			"packages": "ifmtarg,isodate,setspace,substr,xifthen"
 		}
 	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],postCreateCommand
+
+	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "apt-get update && apt-get install -y --no-install-recommends python3-ipykernel python3-pandas",
+
+	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -21,6 +30,7 @@
 				"neo-ltex.ltex",
 				"shardulm94.trailing-spaces"
 			],
+
 			"settings": {
 				// Ltex settings
 				"ltex.enabled": true,
@@ -31,15 +41,11 @@
 			}
 		}
 	},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+
 	"mounts": [
 		"source=${localEnv:HOME}/texmf,target=/root/texmf,type=bind,consistency=cached,readonly"
 	]
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],postCreateCommand
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
-	// Configure tool-specific properties.
-	// "customizations": {},
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }
