@@ -11,7 +11,7 @@
 		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/prulloac/devcontainer-features/latex:1": {
 			"scheme": "small",
-			"packages": "ifmtarg,isodate,setspace,substr,xifthen"
+			"packages": "biber,biblatex,biblatex-apa,csquotes,ifmtarg,isodate,minted,physics,setspace,siunitx,substr,xifthen"
 		}
 	},
 
