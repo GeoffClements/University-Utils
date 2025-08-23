@@ -43,7 +43,7 @@
 	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"remoteUser": "ubuntu",
 
 	"mounts": [
 		"source=${localEnv:HOME}/texmf,target=/root/texmf,type=bind,consistency=cached,readonly"
