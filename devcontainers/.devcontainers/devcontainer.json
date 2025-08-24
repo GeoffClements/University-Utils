@@ -12,6 +12,9 @@
 		"ghcr.io/prulloac/devcontainer-features/latex:1": {
 			"scheme": "small",
 			"packages": "biber,biblatex,biblatex-apa,csquotes,ifmtarg,isodate,minted,physics,setspace,siunitx,substr,xifthen"
+		},
+		"ghcr.io/nils-geistmann/devcontainers-features/create-remote-user:0": {
+			"passwordLessSudo": true
 		}
 	},
 
@@ -19,7 +22,7 @@
 	// "forwardPorts": [],postCreateCommand
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "apt-get update && apt-get install -y --no-install-recommends python3-ipykernel python3-pandas",
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends python3-ipykernel python3-pandas",
 
 	// Configure tool-specific properties.
 	"customizations": {
