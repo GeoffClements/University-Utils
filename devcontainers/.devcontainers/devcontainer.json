@@ -50,6 +50,6 @@
 	"remoteUser": "ubuntu",
 
 	"mounts": [
-		"source=${localEnv:HOME}/texmf,target=/root/texmf,type=bind,consistency=cached,readonly"
+		"source=${localEnv:HOME}/texmf,target=/home/ubuntu/texmf,type=bind,consistency=cached,readonly"
 	]
 }
