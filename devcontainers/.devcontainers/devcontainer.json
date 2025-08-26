@@ -4,7 +4,7 @@
 	"name": "OpenUniversity",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 
-	"image": "docker.io/ubuntu:rolling",
+	"image": "mcr.microsoft.com/devcontainers/base:noble",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -13,17 +13,14 @@
 			"scheme": "small",
 			"mirror": "https://gb.mirrors.cicku.me/ctan/systems/texlive/tlnet/",
 			"packages": "biber,biblatex,biblatex-apa,csquotes,ifmtarg,isodate,minted,physics,setspace,siunitx,substr,xifthen"
-		},
-		"ghcr.io/nils-geistmann/devcontainers-features/create-remote-user:0": {
-			"passwordLessSudo": true
 		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],postCreateCommand
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends python3-ipykernel python3-pandas",
+	// Use 'postCreateCommand' to run commands ipykernelafter the container is created.
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends python3-ipykernel python3-pandas python3-matplotlib python3-scipy python3-astropy",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -46,10 +43,10 @@
 		}
 	},
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "ubuntu",
-
 	"mounts": [
-		"source=${localEnv:HOME}/texmf,target=/home/ubuntu/texmf,type=bind,consistency=cached,readonly"
+		"source=${localEnv:HOME}/texmf,target=/home/vscode/texmf,type=bind,consistency=cached,readonly"
 	]
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root",
 }
