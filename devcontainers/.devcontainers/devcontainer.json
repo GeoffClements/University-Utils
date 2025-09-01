@@ -8,7 +8,9 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "latest"
+		},
 		"ghcr.io/prulloac/devcontainer-features/latex:1": {
 			"scheme": "small",
 			"mirror": "https://gb.mirrors.cicku.me/ctan/systems/texlive/tlnet/",
@@ -19,8 +21,8 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],postCreateCommand
 
-	// Use 'postCreateCommand' to run commands ipykernelafter the container is created.
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends python3-ipykernel python3-pandas python3-matplotlib python3-scipy python3-astropy",
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip install ipykernel ipywidgets pandas matplotlib scipy astropy",
 
 	// Configure tool-specific properties.
 	"customizations": {
