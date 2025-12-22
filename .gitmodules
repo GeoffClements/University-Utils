@@ -4,3 +4,6 @@
 [submodule "Latex-Utilities"]
 	path = Latex-Utilities
 	url = https://github.com/GeoffClements/Latex-Utilities.git
+[submodule "Typst-utilities"]
+	path = Typst-utilities
+	url = git@github.com:GeoffClements/Typst-utilities.git

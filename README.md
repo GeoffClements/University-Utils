@@ -11,6 +11,11 @@ producing Harvard Cite-Them-Right references.
 In addition, there are a couple of `bbx` files for Harvard CTR
 references but I don't know how accurate they are.
 
+## Typst Utilities
+
+A package for writing TMAs which attempts to replicate the 
+Latex class above.
+
 ## Obsidian Snippets for the Latex-Suite Plug-in
 
 Put these into a directory in the root of your vault, 
