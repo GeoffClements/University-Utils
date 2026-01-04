@@ -13,18 +13,18 @@ references but I don't know how accurate they are.
 
 ## Typst Utilities
 
-A package for writing TMAs which attempts to replicate the 
-Latex class above.
+A package for writing TMAs which attempts to replicate the
+Latex class above using Typst.
 
 ## Obsidian Snippets for the Latex-Suite Plug-in
 
-Put these into a directory in the root of your vault, 
+Put these into a directory in the root of your vault,
 and then update the plug-in configuration to use this
 directory.
 
-
 ## Devcontainers
 
-Here is a devcontainer for `vscode`, producing an
-environment for Latex work, Python and some data analysis
+Here are two devcontainers; one contains an
+environment for Typst, the other for Latex work.
+Both have Python and some data analysis packages
 using `Jupyter` within `vscode`.
