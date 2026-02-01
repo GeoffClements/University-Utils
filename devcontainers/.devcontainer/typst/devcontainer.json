@@ -10,6 +10,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
 			"version": "latest"
+			// "version": "os-provided"
 		}
 	},
 	
@@ -17,7 +18,8 @@
 	// "forwardPorts": [],postCreateCommand
 	
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install ipykernel ipywidgets pandas matplotlib scipy astropy",
+	// "postCreateCommand": "pip install ipykernel ipywidgets pandas matplotlib scipy astropy",
+	"postCreateCommand": "./.devcontainer/typst/install_packages.sh",
 	
 	// Configure tool-specific properties.
 	"customizations": {
