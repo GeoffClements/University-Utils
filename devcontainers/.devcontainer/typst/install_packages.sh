@@ -15,9 +15,10 @@ install_pip() {
 
 install_apt() {
     to_install_apt=("${to_install[@]/#/python3-}")
-    sudo apt update
     sudo apt install --no-install-recommends -y ${to_install_apt[@]}
 }
+
+sudo apt update
 
 if dpkg -s python3 >/dev/null 2>&1; then
     echo "python3 is installed (deb package present)"
@@ -26,3 +27,5 @@ else
     echo "python3 is NOT installed via deb"
     install_pip
 fi
+
+sudo apt install --no-install-recommends -y fonts-liberation
